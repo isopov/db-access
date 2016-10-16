@@ -2,6 +2,8 @@ package ru.mail.park.jdbctemplate;
 
 import java.util.List;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
@@ -10,6 +12,7 @@ import ru.mail.park.Foobar;
 import ru.mail.park.IService;
 
 @Service
+@Transactional
 public class JdbcTemplateService implements IService {
   private final JdbcTemplate template;
 
